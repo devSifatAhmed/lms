@@ -6,6 +6,18 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #309256;
+}
+
+::-webkit-scrollbar-track {
+    background: #E7F8EE;
+}
+
 :root {
     --bs-blue: #0d6efd;
     --bs-dark-blue: #004a80;
@@ -30304,13 +30316,104 @@ only screen and (min-width:768px) and (max-width:991px) {
     width: 100%;
     border-bottom: 1px solid #3092567e;
 }
-.chatHead.active{
+
+.chatHead.active {
     background: #E7F8EE;
 }
-.message{
+
+.message {
     justify-content: start;
     display: flex;
 }
-.message.me{
+
+.message.me {
     justify-content: end !important;
+}
+
+.chat-input-form {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.chat-input-form>textarea {
+    flex-grow: 1;
+    outline: none;
+    background: #F5FCF8;
+    border: 2px solid #309255;
+    border-radius: 10px;
+    min-height: 37px;
+    height: 37px;
+    max-height: 230px;
+    width: 0px;
+}
+
+.chat-input-form>button {
+    padding: 0 !important;
+    height: 37px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-view-box-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.chatbox-header {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background: #e0faeb;
+    z-index: 10;
+    position: absolute;
+    height: 68px;
+    top: 0;
+    left: 0;
+}
+
+.chat-body {
+    height: 515px;
+    position: absolute;
+    top: 68px;
+    bottom: 67px;
+    overflow: hidden;
+}
+
+.chat-body>.chi {
+    height: 515px;
+    overflow-y: scroll;
+}
+
+.chatbox-sidebar {
+    width: 350px;
+    border-right: 2px solid #309255;
+    overflow-y: scroll;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width: 768px){
+    .chatbox-sidebar{
+        width: 100px;
+    }
+    .chatbox-sidebar > a > .h{
+        display: none !important;
+    }
+}
+@media (max-width: 550px){
+    .chatbox-sidebar{
+        width: 70px;
+    }
 }
