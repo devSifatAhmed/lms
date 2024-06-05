@@ -21442,7 +21442,7 @@ only screen and (min-width:992px) and (max-width:1199px) {
     color: #309255
 }
 
-.single-courses .courses-content .courses-meta {
+.courses-meta {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -21452,7 +21452,7 @@ only screen and (min-width:992px) and (max-width:1199px) {
     padding-top: 10px
 }
 
-.single-courses .courses-content .courses-meta span {
+.courses-meta span {
     font-size: 14px;
     font-weight: 400;
     color: #52565b;
@@ -21461,11 +21461,11 @@ only screen and (min-width:992px) and (max-width:1199px) {
     line-height: 1
 }
 
-.single-courses .courses-content .courses-meta span:last-child {
+.courses-meta span:last-child {
     margin-right: 0
 }
 
-.single-courses .courses-content .courses-meta span i {
+.courses-meta span i {
     color: #309255;
     margin-right: 5px;
     font-size: 20px;
@@ -30255,4 +30255,62 @@ only screen and (min-width:768px) and (max-width:991px) {
     min-width: calc(60% - 10px) !important;
     max-width: calc(60% - 10px) !important;
     padding-top: 0 !important;
+}
+
+.gig-tab-menu {
+    background: red !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-top: -20px !important;
+}
+
+.gig-tab-menu>ul {
+    gap: 0 !important;
+    flex-wrap: nowrap !important;
+}
+
+.gig-tab-menu>ul>li {
+    margin: 0 !important;
+    padding: 0 !important;
+    flex-grow: 1;
+}
+
+.gig-tab-menu>ul>li>button {
+    border-radius: 0 !important;
+    width: 100% !important;
+}
+
+.user-status {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    bottom: 7px;
+    right: 4px;
+    background: #92979b;
+    border-radius: 100%;
+}
+
+.user-status.active {
+    background: #309255;
+}
+
+.chatHead {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    background: #e7f8ee67;
+    height: fit-content;
+    width: 100%;
+    border-bottom: 1px solid #3092567e;
+}
+.chatHead.active{
+    background: #E7F8EE;
+}
+.message{
+    justify-content: start;
+    display: flex;
+}
+.message.me{
+    justify-content: end !important;
 }
